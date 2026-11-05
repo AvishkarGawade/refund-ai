@@ -1,0 +1,23 @@
+{
+  "txn_101": {
+    "amount": 1499.0,
+    "currency": "INR",
+    "created_at": "2026-10-25T10:00:00Z",
+    "status": "captured",
+    "refund_status": "Processed"
+  },
+  "txn_102": {
+    "amount": 799.0,
+    "currency": "INR",
+    "created_at": "2026-08-01T14:30:00Z",
+    "status": "captured",
+    "refund_status": null
+  },
+  "txn_103": {
+    "amount": 2999.0,
+    "currency": "INR",
+    "created_at": "2026-10-28T09:15:00Z",
+    "status": "captured",
+    "refund_status": "processed"
+  }
+}
