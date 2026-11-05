@@ -2,7 +2,6 @@ import os
 from dotenv import load_dotenv
 
 from langchain.agents import create_agent
-from langchain_huggingface import HuggingFacePipeline, ChatHuggingFace
 from langchain_google_genai import ChatGoogleGenerativeAI
 from prompts import REFUND_AGENT_SYSTEM_PROMPT
 from tools.transaction_tools import get_transaction_details, get_refund_policy, calculate_elapsed_time, process_refund
