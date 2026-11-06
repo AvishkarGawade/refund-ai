@@ -11,8 +11,32 @@ app = FastAPI(title="RefundAI Agent Service")
 
 class RefundRequest(BaseModel):
     query: str
-
+    
 @app.get("/")
+def home():
+    return {
+        "service": "RefundAI Agent",
+        "status": "online",
+        "description": "Autonomous AI agent for evaluating and initiating transaction refund requests.",
+        "usage": {
+            "endpoint": "/refund",
+            "method": "POST",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": {
+                "query": "Check refund eligibility for transaction txn_101"
+            },
+            "curl_example": (
+                "curl -X POST 'https://YOUR-CLOUD-RUN-URL/refund' "
+                "-H 'Content-Type: application/json' "
+                "-d '{\"query\": \"Check refund status for transaction txn_101\"}'"
+            )
+        },
+        "docs_url": "/docs"
+    }
+    
+@app.get("/health")
 def health_check():
     return {"status": "healthy", "service": "RefundAI Agent"}
 
